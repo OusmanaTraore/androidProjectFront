@@ -42,7 +42,7 @@ public class Client {
         this.tel = tel;
         this.role = "CLIENT";
         this.status = "EN ATTENTE";
-        this.password = null;
+        this.password = "";
     }
 
     public String getName() {

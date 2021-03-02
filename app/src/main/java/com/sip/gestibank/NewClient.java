@@ -6,6 +6,9 @@ import android.app.AlertDialog;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -20,15 +23,46 @@ import com.sip.gestibank.remote.ClientService;
 public class NewClient extends AppCompatActivity {
 ClientService clientService;
 List<Client>list;
+
+    EditText name;
+    EditText email;
+    EditText tel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_client);
         clientService = APIUtils.getClientService();
+
+        name = (EditText) findViewById(R.id.editName);
+        email = (EditText) findViewById(R.id.editEmail);
+        tel = (EditText) findViewById(R.id.editTel);
+
     }
 
 
-    public void getUsersList(View v){
+    public void addNewClient(View v){
+
+
+        Client client= new Client(name.getText().toString(),email.getText().toString(),tel.getText().toString());
+        Call<Client> call = clientService.addClient(client);
+        call.enqueue(new Callback<Client>() {
+            @Override
+            public void onResponse(Call<Client> call, Response<Client> response) {
+                if(response.isSuccessful()){
+                    Toast.makeText(NewClient.this, "Client created successfully!", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Client> call, Throwable t) {
+                Log.e("ERROR: ", t.getMessage());
+            }
+        });
+
+    }
+
+
+    public void getClientsList(View v){
         Call<List<Client>> call = clientService.getClients();
         call.enqueue(new Callback<List<Client>>() {
             @Override
@@ -41,8 +75,8 @@ List<Client>list;
                     for (Client user : list)
                     {
 
-                        buffer.append("Name: "+user.getName()+"\n\n");
-                        buffer.append("Email: "+user.getEmail()+"\n");
+                        buffer.append("Name: "+user.getName()+"\n");
+                        buffer.append("Email: "+user.getEmail()+"\n\n");
 
                     }
                     showMessage("Clients List", buffer.toString());
