@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".adminDashbord2">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <FrameLayout
+        android:id="@+id/main_FrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearlayout"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="194dp" />
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btn_Consulter_Demandes"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Consulter les demandes"
+            tools:ignore ="MissingConstraints"/>
+        <Button
+            android:id="@+id/btn_Consulter_Agents"
+            android:layout_width="180dp"
+
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Consulter les agents"
+            tools:ignore ="MissingConstraints"/>
+        <Button
+            android:id="@+id/btn_Ajouter_Agent"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Ajouter un agent"
+            tools:ignore ="MissingConstraints"/>
+    </LinearLayout>
+</RelativeLayout>
