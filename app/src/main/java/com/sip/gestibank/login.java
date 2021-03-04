@@ -48,7 +48,7 @@ public class login extends AppCompatActivity {
 
     }
     public void dashboardUser(View v){
-        Toast.makeText(login.this, "Login " , Toast.LENGTH_SHORT).show();
+        Toast.makeText(login.this, "login " , Toast.LENGTH_SHORT).show();
         Intent intentLogin = new Intent(getApplicationContext(), dashboardAdmin.class);
         startActivity(intentLogin);
 
