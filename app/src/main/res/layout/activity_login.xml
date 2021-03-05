@@ -6,22 +6,26 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".login">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical">
+
         <ImageView
             android:layout_width="250dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
-            android:background="@drawable/gestibank_prochedevous"/>
+            android:background="@drawable/gestibank_prochedevous" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"
             android:gravity="center"
+            android:shadowColor="@color/teal_700"
             android:text="Authentification"
             android:textColor="@color/black"
             android:textSize="35sp"
@@ -32,47 +36,59 @@
             android:layout_height="52dp"
             android:layout_marginHorizontal="38dp"
             android:layout_marginVertical="10dp"
-            android:orientation="horizontal"
-            android:padding="10dp">
+            android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_gravity="center"
-                android:background="@drawable/mail"/>
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="5dp"
+
+                android:foreground="@drawable/mail"
+                android:padding="10dp" />
 
             <EditText
                 android:id="@+id/editTextEmail"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:background="@null"
+                android:layout_height="match_parent"
+
+                android:background="#82b1ff"
                 android:gravity="center|start"
                 android:hint="Email adresse"
                 android:inputType="textEmailAddress"
-                android:paddingStart="10dp"
-                android:paddingLeft="10dp" />
+                android:textColor="#fff"
+                android:textColorHint="@color/black"
+                android:textStyle="bold" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="52dp"
             android:layout_marginHorizontal="38dp"
-            android:orientation="horizontal"
-            android:padding="10dp">
+            android:layout_marginVertical="10dp"
+            android:orientation="horizontal">
+
             <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_gravity="start"
-                android:background="@drawable/lock"/>
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="5dp"
+                android:foreground="@drawable/lock"
+                android:padding="10dp" />
+
             <EditText
                 android:id="@+id/editTextPassword"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:background="@null"
+                android:layout_height="match_parent"
+                android:background="#82b1ff"
                 android:gravity="center|start"
                 android:hint="Password"
                 android:inputType="textPassword"
-                android:paddingStart="10dp"
-                android:paddingLeft="10dp"/>
+                android:textColor="#fff"
+                android:textColorHint="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -81,23 +97,23 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="38dp"
             android:layout_marginTop="15dp"
-
             android:clickable="true"
             android:focusable="true"
-
             android:foreground="?attr/selectableItemBackground"
-            >
 
-            <Button
+            android:gravity="center">
+
+            <ImageButton
 
                 android:id="@+id/Idlogin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/login"
                 android:clickable="true"
-                android:onClick="dashboardUser"
-                android:text="Connexion" />
+                android:onClick="dashboardUser" />
 
         </RelativeLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -110,7 +126,8 @@
                 android:layout_height="wrap_content"
                 android:text="By signing up, you agree with our "
                 android:textColor="@color/black"
-                android:textSize="12sp"/>
+                android:textSize="12sp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -120,10 +137,10 @@
                 android:paddingLeft="5dp"
                 android:text="Terms &amp; Conditions"
                 android:textColor="@color/purple_500"
-                android:textSize="12sp"/>
+                android:textSize="12sp" />
 
 
         </LinearLayout>
 
-        </LinearLayout>
     </LinearLayout>
+</LinearLayout>

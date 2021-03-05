@@ -48,19 +48,19 @@ public class login extends AppCompatActivity {
 
     }
     public void dashboardUser(View v){
-        Toast.makeText(login.this, "login " , Toast.LENGTH_SHORT).show();
+       /* Toast.makeText(login.this, "login " , Toast.LENGTH_SHORT).show();
         Intent intentlogin = new Intent(getApplicationContext(), dashboardAdmin.class);
-        startActivity(intentlogin);
+        startActivity(intentlogin);*/
 
 
-       /* myEmail = email.getText().toString();
+       myEmail = email.getText().toString();
         myPassword = password.getText().toString();
 
-       Toast.makeText(login.this, "Login : "+ myEmail +" Password : "+ myPassword, Toast.LENGTH_SHORT).show();
-*/
+     Toast.makeText(login.this, "Login : "+ myEmail +" Password : "+ myPassword, Toast.LENGTH_SHORT).show();
+
         // récupération du user et donc de son role
 
-       /* Call<User> call = authService.getUserByEmail(myEmail);
+        Call<User> call = authService.getUserByEmail(myEmail);
 
         call.enqueue(new Callback<User>() {
             @Override
@@ -80,7 +80,7 @@ public class login extends AppCompatActivity {
         //...
 
 
-        //role =user.getRole();
+        role =user.getRole();
         //Redirection vers le dashboard en question : Admin, Client ou Agent
 
         switch(role)
@@ -99,7 +99,7 @@ public class login extends AppCompatActivity {
                 Intent intent3 = new Intent(login.this, dashboardAdmin.class);
                 startActivity(intent3);
                 break;
-        }*/
+        }
     }
     public void showMessage(String title,String message)
     {
