@@ -17,15 +17,15 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class dashboardAdmin extends AppCompatActivity {
-    ClientService clientService;
-    List<Client>list;
+  //  ClientService clientService;
+    //List<Client>list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard_admin);
     }
-    public void getClientsList(View v){
+   /* public void getClientsList(View v){
         Call<List<Client>> call = clientService.getClients();
         call.enqueue(new Callback<List<Client>>() {
             @Override
@@ -61,5 +61,5 @@ public class dashboardAdmin extends AppCompatActivity {
         builder.setTitle(title);
         builder.setMessage(message);
         builder.show();
-    }
+    }*/
 }

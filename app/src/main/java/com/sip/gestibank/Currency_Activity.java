@@ -67,7 +67,7 @@ public class Currency_Activity extends AppCompatActivity {
                     cours = Double.parseDouble(rate);
                     res = cours*input;
                     res = (double)((int)(res*100))/100;
-                    myRes.setText("Résultat conversion = "+Double.valueOf(res).toString());
+                    myRes.setText(Double.valueOf(res).toString());
                 }
             }
 

@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         myButtonDevise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), devise.class);
+                Intent intent = new Intent(getApplicationContext(), Currency_Activity.class);
                 startActivity(intent);
             }
         });

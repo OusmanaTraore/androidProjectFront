@@ -44,7 +44,8 @@
         <Button
             android:id="@+id/btnConsulterLesDemandes"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:textStyle="bold"
@@ -53,7 +54,8 @@
         <Button
             android:id="@+id/btnConsulterAgents"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:onClick="getClientsList"
@@ -61,7 +63,8 @@
         <Button
             android:id="@+id/btnAjouterAgent"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:textStyle="bold"

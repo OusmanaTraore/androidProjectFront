@@ -48,17 +48,14 @@ public class login extends AppCompatActivity {
 
     }
     public void dashboardUser(View v){
-       /* Toast.makeText(login.this, "login " , Toast.LENGTH_SHORT).show();
-        Intent intentlogin = new Intent(getApplicationContext(), dashboardAdmin.class);
-        startActivity(intentlogin);*/
+       // Toast.makeText(login.this, "ok ", Toast.LENGTH_SHORT).show();
+
 
 
        myEmail = email.getText().toString();
-        myPassword = password.getText().toString();
+       myPassword = password.getText().toString();
 
-     Toast.makeText(login.this, "Login : "+ myEmail +" Password : "+ myPassword, Toast.LENGTH_SHORT).show();
-
-        // récupération du user et donc de son role
+     //Toast.makeText(login.this, "Login : "+ myEmail +" Password : "+ myPassword, Toast.LENGTH_SHORT).show();
 
         Call<User> call = authService.getUserByEmail(myEmail);
 
@@ -67,7 +64,40 @@ public class login extends AppCompatActivity {
             public void onResponse(Call<User> call, Response<User> response) {
                 if(response.isSuccessful()){
                     user = response.body();
-                    role = user.getRole();
+                    if(user!=null){
+                        if(user.getEmail().equals(myEmail) && user.getPassword().equals(myPassword))
+                        {
+                            role = user.getRole();
+                            switch(role)
+                            {
+                                case "AGENT" : //.... redirection vers dashboard Agent
+                                    Intent intent1 = new Intent(login.this, dashboardAdmin.class);
+                                    startActivity(intent1);
+                                    break;
+
+                                case "CLIENT" : //.... redirection vers dashboard Agent
+                                    Intent intent2 = new Intent(login.this, dashboardClient.class);
+                                    startActivity(intent2);
+                                    break;
+
+                                case "ADMIN" : //.... redirection vers dashboard Agent
+                                    Intent intent3 = new Intent(login.this, dashboardAdmin.class);
+                                    startActivity(intent3);
+                                    break;
+                                default :
+                            }
+                        }
+                        else
+                        {
+
+                            Toast.makeText(login.this, "Login ou Password invalides", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                    else
+                    {
+
+                        Toast.makeText(login.this, "Utilisateur inexistant", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
             @Override
@@ -75,31 +105,6 @@ public class login extends AppCompatActivity {
                 Log.e("ERROR: ", t.getMessage());
             }
         });
-        // fin récupération
-
-        //...
-
-
-        role =user.getRole();
-        //Redirection vers le dashboard en question : Admin, Client ou Agent
-
-        switch(role)
-        {
-            case "AGENT" : //.... redirection vers dashboard Agent
-                Intent intent1 = new Intent(login.this, dashboardAgent.class);
-                startActivity(intent1);
-                break;
-
-            case "CLIENT" : //.... redirection vers dashboard Agent
-                Intent intent2 = new Intent(login.this, dashboardClient.class);
-                startActivity(intent2);
-                break;
-
-            case "ADMIN" : //.... redirection vers dashboard Agent
-                Intent intent3 = new Intent(login.this, dashboardAdmin.class);
-                startActivity(intent3);
-                break;
-        }
     }
     public void showMessage(String title,String message)
     {

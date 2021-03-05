@@ -10,30 +10,33 @@
     tools:context=".MainActivity">
 
     <VideoView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
         android:id="@+id/videoView"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="65dp">
+        android:layout_marginBottom="150dp">
 
 
     <Button
         android:id="@+id/btnGoToTheCreationCompte"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
+        android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:text="Creation de compte" />
 
     <Button
         android:id="@+id/btnGoToTheDevise"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
+        android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:text="Devise" />
@@ -48,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="80dp"
             android:gravity="center"
             android:text="Bienvenu(e) à Gestibank!"
             android:textAlignment="center"

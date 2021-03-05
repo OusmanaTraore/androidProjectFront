@@ -53,9 +53,11 @@
         <Button
             android:id="@+id/btnDemandeChequier"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="match_parent"
+
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+            android:layout_width="250dp"
+            android:layout_gravity="center"
             android:textStyle="bold"
             android:text="Demande Chéquier" />
 
@@ -64,7 +66,8 @@
         <Button
             android:id="@+id/btnHistorique"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:text="Historique" />
@@ -72,7 +75,8 @@
         <Button
             android:id="@+id/btnChangerMotDePasse"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:text="Changer mot de passe" />

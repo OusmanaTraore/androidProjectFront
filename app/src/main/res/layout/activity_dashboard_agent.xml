@@ -52,7 +52,8 @@
         <Button
             android:id="@+id/btnConsulterLesDemandes"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:textStyle="bold"
@@ -63,7 +64,8 @@
         <Button
             android:id="@+id/btnGererChequier"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:text="Gérer les Chéquiers" />
@@ -71,7 +73,8 @@
         <Button
             android:id="@+id/btnChangerMotDePasseAgent"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:textStyle="bold"

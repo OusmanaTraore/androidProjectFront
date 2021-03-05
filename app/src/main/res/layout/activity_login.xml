@@ -54,7 +54,7 @@
 
                 android:background="#82b1ff"
                 android:gravity="center|start"
-                android:hint="Email adresse"
+                android:hint="Email"
                 android:inputType="textEmailAddress"
                 android:textColor="#fff"
                 android:textColorHint="@color/black"
