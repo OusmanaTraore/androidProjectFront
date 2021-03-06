@@ -115,34 +115,4 @@ public class login extends AppCompatActivity {
         builder.show();
     }
 
-
-
-
-   /* public void Navigate(View v){
-        switch (v.getId()){
-            case R.id.btnAdmin:
-                Intent intentA = new Intent(getApplicationContext(), dashboardAdmin.class);
-                startActivity(intentA);
-                break;
-            case R.id.btnAgent:
-                Intent intentB = new Intent(getApplicationContext(), dashboardAgent.class);
-                startActivity(intentB);
-                break;
-            case R.id.btnClient:
-                Intent intentC = new Intent(getApplicationContext(), dashboardClient.class);
-                startActivity(intentC);
-                break;
-            case R.id.Idlogin:
-                Intent intentLogin = new Intent(getApplicationContext(), dashboardAdmin.class);
-                startActivity(intentLogin);
-                break;
-
-            case R.id.btnDeconnecter:
-                Intent intentD = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intentD);
-                finish();
-                break;
-        }
-
-    }*/
 }
